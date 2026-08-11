@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/adu-cost-guide">ADU Cost Guide</a>
+        <a href="/garage-conversion">Garage Conversion</a>
+        <a href="/junior-adu-guide">Junior ADU</a>
+        <a href="/permits-guide">Permits Guide</a>
+        <a href="/contractor-red-flags">Contractor Red Flags</a>
+        <a href="/free-adu-prep-check">Free Prep Check</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p>&copy; 2026 Riverside ADU Guide. Serving Inland Empire homeowners.</p>
+    </footer>
+  </body>
+</html>
