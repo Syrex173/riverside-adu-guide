@@ -8,7 +8,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <h1>Free ADU Property Prep Check</h1>
   <p>Fill out the form below and we'll help you understand what your property may support before you talk to a contractor.</p>
 
-  <form action="PASTE_FORMSPREE_ENDPOINT_HERE" method="POST">
+  <form action="https://formspree.io/f/mppalroy" method="POST">
+    <input type="hidden" name="_subject" value="New Riverside ADU Property Prep Check Lead" />
+
     <label for="name">Name
       <input type="text" id="name" name="name" required />
     </label>
@@ -18,7 +20,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </label>
 
     <label for="phone">Phone
-      <input type="tel" id="phone" name="phone" required />
+      <input type="tel" id="phone" name="phone" />
     </label>
 
     <label for="address">Property Address
@@ -54,7 +56,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </label>
 
     <label for="budget_range">Budget Range
-      <select id="budget_range" name="budget_range" required>
+      <select id="budget_range" name="budget_range">
         <option value="">Select one</option>
         <option value="Under $50k">Under $50k</option>
         <option value="$50k-$100k">$50k-$100k</option>
@@ -65,7 +67,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </label>
 
     <label for="biggest_question">Biggest Question
-      <textarea id="biggest_question" name="biggest_question"></textarea>
+      <textarea id="biggest_question" name="biggest_question" required></textarea>
     </label>
 
     <button type="submit">Submit</button>
