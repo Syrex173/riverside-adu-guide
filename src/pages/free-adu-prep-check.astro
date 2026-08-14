@@ -2,74 +2,149 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout
-  title="Free ADU Property Prep Check | Riverside ADU Guide"
-  description="Get a free property prep check to see what your Riverside property may support for an ADU project."
+  title="Free ADU Property Preview | Riverside ADU Guide"
+  description="Get a free preliminary ADU property preview for your Riverside property, including possible ADU direction, garage conversion or JADU fit, visible red flags, and next questions before calling contractors."
 >
-  <h1>Free ADU Property Prep Check</h1>
-  <p>Fill out the form below and we'll help you understand what your property may support before you talk to a contractor.</p>
+  <h1>Free ADU Property Preview</h1>
 
-  <form action="https://formspree.io/f/mppalroy" method="POST">
-    <input type="hidden" name="_subject" value="New Riverside ADU Property Prep Check Lead" />
+  <section class="intro">
+    <p>Before you call contractors, get a first look at what may make sense for your property.</p>
+    <p>Generic ADU articles can only help so much. Your real question is not &ldquo;What is an ADU?&rdquo; Your real question is:</p>
+    <p>&ldquo;What could work on my property?&rdquo;</p>
+    <p>That is what this free ADU Property Preview is for.</p>
+    <p>Submit your property address, project goal, timeline, and biggest question. We will review the basic information and help you understand which ADU path may be worth exploring next.</p>
+    <a class="cta-link" href="#preview-form">Start My Free Property Preview</a>
+  </section>
 
-    <label for="name">Name
-      <input type="text" id="name" name="name" required />
-    </label>
+  <section class="what-we-look-at">
+    <h2>What We Look At</h2>
+    <p>A basic property preview may look at:</p>
+    <ul>
+      <li>your property address</li>
+      <li>visible lot layout</li>
+      <li>garage location</li>
+      <li>backyard space</li>
+      <li>driveway and access</li>
+      <li>possible detached ADU direction</li>
+      <li>possible garage conversion direction</li>
+      <li>possible Junior ADU / JADU direction</li>
+      <li>privacy and entrance questions</li>
+      <li>visible utility or access questions</li>
+      <li>red flags to ask about before hiring anyone</li>
+    </ul>
+    <p>This is not just generic ADU advice. The goal is to help you start thinking about your actual property.</p>
+  </section>
 
-    <label for="email">Email
-      <input type="email" id="email" name="email" required />
-    </label>
+  <section class="what-you-receive">
+    <h2>What You May Receive Back</h2>
+    <p>Depending on the property and available information, your preview may include:</p>
+    <ul>
+      <li>which ADU path may be worth exploring first</li>
+      <li>questions to ask before a contractor visit</li>
+      <li>visible issues to verify</li>
+      <li>possible garage conversion or JADU considerations</li>
+      <li>possible yard or access concerns</li>
+      <li>what photos would help next</li>
+      <li>what a contractor or designer should inspect in person</li>
+      <li>whether an on-site photo review may be useful</li>
+    </ul>
+    <p>The first preview is preliminary, but it can help you avoid starting from zero.</p>
+  </section>
 
-    <label for="phone">Phone
-      <input type="tel" id="phone" name="phone" />
-    </label>
+  <section class="why-matters">
+    <h2>Why This Matters Before Calling Contractors</h2>
+    <p>Most homeowners start calling contractors before they know what they are comparing.</p>
+    <p>That creates pressure.</p>
+    <p>One person says the garage conversion is easy. Another says it will be expensive. Someone gives a fast price. Someone else talks about permits, utilities, access, plans, and city review. The homeowner is left trying to compare people, prices, and promises without knowing what is normal.</p>
+    <p>A property preview helps you slow down and organize the first questions.</p>
+    <p>The goal is not to replace licensed professionals. The goal is to help you walk into those conversations prepared.</p>
+  </section>
 
-    <label for="address">Property Address
-      <input type="text" id="address" name="address" required />
-    </label>
+  <section class="visual-preview">
+    <h2>The Visual Preview Idea</h2>
+    <p>As this service grows, the goal is to make the process more visual.</p>
+    <p>That may include aerial property views, marked-up placement ideas, garage conversion direction, JADU possibilities, yard-use examples, and simple concept visuals that help homeowners imagine what could fit.</p>
+    <p>For a more detailed visual concept, an on-site visit may be needed. That could include taking photos of the yard, garage, side access, driveway, and possible ADU area. In some cases, a contractor visit may also make sense so the homeowner can understand possible cost and construction questions early.</p>
+    <p>For now, the free preview starts with the basic property information you submit below.</p>
+  </section>
 
-    <label for="city">City
-      <input type="text" id="city" name="city" required />
-    </label>
+  <section class="disclaimer">
+    <h2>Important Disclaimer</h2>
+    <p>This free ADU Property Preview is not official city approval.</p>
+    <p>It is not legal advice, architecture, engineering, a permit guarantee, a property survey, or a contractor estimate.</p>
+    <p>It is a preliminary homeowner planning review based on the information you submit, visible property information, and common ADU planning factors.</p>
+    <p>Before making final decisions, homeowners should verify requirements with the City of Riverside and qualified licensed professionals.</p>
+  </section>
 
-    <label for="project_type">Project Type
-      <select id="project_type" name="project_type" required>
-        <option value="">Select one</option>
-        <option value="Garage Conversion">Garage Conversion</option>
-        <option value="Junior ADU">Junior ADU</option>
-        <option value="New Detached ADU">New Detached ADU</option>
-        <option value="Not Sure">Not Sure</option>
-      </select>
-    </label>
+  <section class="preview-form" id="preview-form">
+    <h2>Start Your Free ADU Property Preview</h2>
+    <p>Fill out the form below. The more detail you give, the more useful the first preview can be.</p>
 
-    <label for="main_goal">Main Goal
-      <input type="text" id="main_goal" name="main_goal" />
-    </label>
+    <form action="https://formspree.io/f/mppalroy" method="POST">
+      <input type="hidden" name="_subject" value="New Riverside ADU Property Prep Check Lead" />
 
-    <label for="timeline">Timeline
-      <select id="timeline" name="timeline" required>
-        <option value="">Select one</option>
-        <option value="ASAP">ASAP</option>
-        <option value="3-6 months">3-6 months</option>
-        <option value="6-12 months">6-12 months</option>
-        <option value="Just researching">Just researching</option>
-      </select>
-    </label>
+      <label for="name">Name
+        <input type="text" id="name" name="name" required />
+      </label>
 
-    <label for="budget_range">Budget Range
-      <select id="budget_range" name="budget_range">
-        <option value="">Select one</option>
-        <option value="Under $50k">Under $50k</option>
-        <option value="$50k-$100k">$50k-$100k</option>
-        <option value="$100k-$150k">$100k-$150k</option>
-        <option value="$150k+">$150k+</option>
-        <option value="Not sure">Not sure</option>
-      </select>
-    </label>
+      <label for="email">Email
+        <input type="email" id="email" name="email" required />
+      </label>
 
-    <label for="biggest_question">Biggest Question
-      <textarea id="biggest_question" name="biggest_question" required></textarea>
-    </label>
+      <label for="phone">Phone
+        <input type="tel" id="phone" name="phone" />
+      </label>
 
-    <button type="submit">Submit</button>
-  </form>
+      <label for="address">Property Address
+        <input type="text" id="address" name="address" required />
+      </label>
+
+      <label for="city">City
+        <input type="text" id="city" name="city" required />
+      </label>
+
+      <label for="project_type">Project Type
+        <select id="project_type" name="project_type" required>
+          <option value="">Select one</option>
+          <option value="Garage Conversion">Garage Conversion</option>
+          <option value="Junior ADU">Junior ADU</option>
+          <option value="New Detached ADU">New Detached ADU</option>
+          <option value="Not Sure">Not Sure</option>
+        </select>
+      </label>
+
+      <label for="main_goal">Main Goal
+        <input type="text" id="main_goal" name="main_goal" />
+      </label>
+
+      <label for="timeline">Timeline
+        <select id="timeline" name="timeline" required>
+          <option value="">Select one</option>
+          <option value="ASAP">ASAP</option>
+          <option value="3-6 months">3-6 months</option>
+          <option value="6-12 months">6-12 months</option>
+          <option value="Just researching">Just researching</option>
+        </select>
+      </label>
+
+      <label for="budget_range">Budget Range
+        <select id="budget_range" name="budget_range">
+          <option value="">Select one</option>
+          <option value="Under $50k">Under $50k</option>
+          <option value="$50k-$100k">$50k-$100k</option>
+          <option value="$100k-$150k">$100k-$150k</option>
+          <option value="$150k+">$150k+</option>
+          <option value="Not sure">Not sure</option>
+        </select>
+      </label>
+
+      <label for="biggest_question">Biggest Question
+        <textarea id="biggest_question" name="biggest_question" required></textarea>
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p class="closing-note">Your information is used to review your ADU question and respond to your request. No construction decision should be made from this preview alone. The purpose is to help you get organized before calling contractors, designers, or the city.</p>
+  </section>
 </BaseLayout>
