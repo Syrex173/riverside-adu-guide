@@ -14,20 +14,24 @@ const { title, description } = Astro.props;
   <body>
     <header class="site-header">
       <nav class="site-nav">
-        <a href="/">Home</a>
-        <a href="/adu-cost-guide">ADU Cost Guide</a>
-        <a href="/garage-conversion">Garage Conversion</a>
-        <a href="/junior-adu-guide">Junior ADU</a>
-        <a href="/permits-guide">Permits Guide</a>
-        <a href="/contractor-red-flags">Contractor Red Flags</a>
-        <a href="/free-adu-prep-check">Property Preview</a>
+        <a href="/" class="site-logo">Riverside ADU Guide</a>
+        <div class="nav-links">
+          <a href="/adu-cost-guide">ADU Cost Guide</a>
+          <a href="/garage-conversion">Garage Conversion</a>
+          <a href="/junior-adu-guide">Junior ADU</a>
+          <a href="/permits-guide">Permits Guide</a>
+          <a href="/contractor-red-flags">Contractor Red Flags</a>
+          <a href="/free-adu-prep-check" class="nav-cta">Property Preview</a>
+        </div>
       </nav>
     </header>
     <main>
       <slot />
     </main>
     <footer class="site-footer">
-      <p>&copy; 2026 Riverside ADU Guide. Serving Inland Empire homeowners.</p>
+      <div class="site-wrapper">
+        <p>&copy; 2026 Riverside ADU Guide. Serving Inland Empire homeowners.</p>
+      </div>
     </footer>
   </body>
 </html>
