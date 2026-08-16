@@ -3,100 +3,200 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout
   title="Riverside ADU Guide | Inland Empire Homeowner Resource"
-  description="A local resource for Riverside and Inland Empire homeowners exploring ADU, garage conversion, and junior ADU projects."
+  description="Get a free ADU Property Preview for your Riverside home — a first look at what may work on your property before you call a contractor."
 >
   <section class="hero">
-    <div class="site-wrapper">
-      <h1>Planning an ADU in Riverside? Get Prepared Before You Call Contractors.</h1>
-      <p>Riverside ADU Guide helps local homeowners understand ADU options, cost ranges, garage conversions, junior ADUs, permit questions, and contractor red flags before the first appointment.</p>
-      <p>Before you invite strangers into your home, get clear on what to expect.</p>
-      <a class="cta-link" href="/free-adu-prep-check">Get a Free ADU Property Preview</a>
-      <p><a class="hero-secondary-link" href="/adu-cost-guide">Read the Riverside ADU Cost Guide</a></p>
-      <p class="trust-note">No cost. No contractor sales pitch.</p>
+    <div class="hero-wrapper">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-label">Riverside / Inland Empire · Free Homeowner Resource</p>
+          <h1>See what ADU options may work for your Riverside property — before you call a contractor.</h1>
+          <p class="hero-subhead">We look at your actual lot — size, access, setbacks, and project type — and give you a realistic first look before you talk to anyone.</p>
+          <a class="cta-link cta-link-lg" href="/free-adu-prep-check">See What May Work for My Property &rarr;</a>
+          <p class="hero-microtrust">No contractor sales pitch · No cost · No obligation</p>
+          <p><a class="hero-secondary-link" href="/adu-cost-guide">Prefer to read first? View the Riverside ADU Cost Guide &rarr;</a></p>
+        </div>
+
+        <div class="hero-visual">
+          <div class="preview-card">
+            <div class="preview-card-top">
+              <div>
+                <p class="preview-card-title">Free ADU Property Preview</p>
+                <p class="preview-card-address">1842 Sample St · Riverside, CA 92506</p>
+              </div>
+              <span class="preview-card-badge">SAMPLE</span>
+            </div>
+
+            <p class="preview-card-label">Parcel overview</p>
+            <div class="parcel-diagram">
+              <svg viewBox="0 0 320 220" role="img" aria-label="Sample parcel sketch showing the house, garage, a possible ADU zone in the backyard, and a setback line">
+                <rect x="10" y="10" width="300" height="200" fill="#F7F3EA" stroke="#17324D" stroke-width="2" stroke-dasharray="6 4" />
+
+                <rect x="28" y="26" width="110" height="66" fill="#17324D" />
+                <text x="83" y="63" text-anchor="middle" fill="#FFFFFF" font-size="11" font-family="Arial, Helvetica, sans-serif">HOUSE</text>
+
+                <rect x="28" y="102" width="70" height="46" fill="#a8c8e0" stroke="#17324D" stroke-width="1.5" />
+                <text x="63" y="129" text-anchor="middle" fill="#17324D" font-size="10" font-family="Arial, Helvetica, sans-serif">GARAGE</text>
+
+                <rect x="150" y="100" width="140" height="90" fill="#EAF5EA" stroke="#4F8A5B" stroke-width="1.5" stroke-dasharray="5 3" />
+                <text x="220" y="139" text-anchor="middle" fill="#4F8A5B" font-size="10" font-weight="bold" font-family="Arial, Helvetica, sans-serif">Possible</text>
+                <text x="220" y="153" text-anchor="middle" fill="#4F8A5B" font-size="10" font-weight="bold" font-family="Arial, Helvetica, sans-serif">ADU zone</text>
+
+                <line x1="150" y1="92" x2="290" y2="92" stroke="#D65A31" stroke-width="2" stroke-dasharray="4 3" />
+                <text x="220" y="86" text-anchor="middle" fill="#D65A31" font-size="9" font-family="Arial, Helvetica, sans-serif">setback</text>
+
+                <text x="20" y="120" fill="#17324D" font-size="9" font-family="Arial, Helvetica, sans-serif" transform="rotate(-90 20 120)">side access</text>
+              </svg>
+            </div>
+            <p class="parcel-note">~60 ft lot width · side access noted</p>
+
+            <p class="preview-card-label">Preliminary findings</p>
+            <div class="findings-list">
+              <div class="finding">
+                <p class="finding-title">Detached backyard ADU — likely worth exploring</p>
+                <p class="finding-text">Rear yard appears to have useful depth. Final size depends on setbacks, utilities, and city review.</p>
+              </div>
+              <div class="finding">
+                <p class="finding-title">Garage conversion — worth checking</p>
+                <p class="finding-text">Garage structure noted. Interior dimensions, slab condition, and utility access should be verified.</p>
+              </div>
+              <div class="finding finding-flag">
+                <p class="finding-title">Side yard access — flag for review</p>
+                <p class="finding-text">Narrow side clearance may affect construction access, parking, or layout options.</p>
+              </div>
+            </div>
+
+            <div class="preview-card-footer">
+              <p class="preview-card-footer-title">Your next step</p>
+              <p>Take photos of the backyard, garage, side yard, electrical panel, and possible entrance area.</p>
+              <a class="cta-link" href="/free-adu-prep-check">Get My Preview &rarr;</a>
+            </div>
+          </div>
+          <p class="preview-card-note">Example only · Your preview is specific to your property</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="trust-bar">
     <div class="trust-bar-inner">
-      <span class="trust-bar-item">&#10003; No contractor sales pitch</span>
-      <span class="trust-bar-item">&#10003; Riverside-specific info</span>
-      <span class="trust-bar-item">&#10003; Local construction experience</span>
+      <span class="trust-bar-item"><span class="trust-check">&#10003;</span> Riverside-specific, not generic</span>
+      <span class="trust-bar-item"><span class="trust-check">&#10003;</span> No contractor will contact you without permission</span>
+      <span class="trust-bar-item"><span class="trust-check">&#10003;</span> Built from local construction/project experience</span>
     </div>
   </section>
 
   <div class="site-wrapper">
-  <section class="pain">
-    <h2>Most Homeowners Start Calling Contractors Before They Know What to Expect</h2>
-    <p>That is when the process gets stressful.</p>
-    <p>One contractor says one thing. Another gives a completely different price. Someone says permits are easy. Someone else says the project is complicated. Before you know it, you are comparing strangers, numbers, promises, and pressure without really knowing what is normal.</p>
-    <p>This guide exists to help Riverside homeowners slow down, get organized, and understand the basics before making expensive decisions.</p>
-    <p>You should not feel defenseless when the first contractor walks through your door.</p>
+  <section class="how-it-works">
+    <h2>How the Free ADU Property Preview Works</h2>
+    <div class="step-grid">
+      <div class="step-card">
+        <span class="step-number">1</span>
+        <h3>Tell us about your property</h3>
+        <p>Share your address, project type, timeline, and biggest question.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-number">2</span>
+        <h3>We take a first look</h3>
+        <p>We review visible property information, possible ADU direction, access questions, and common red flags.</p>
+      </div>
+      <div class="step-card">
+        <span class="step-number">3</span>
+        <h3>You get clearer next steps</h3>
+        <p>You receive practical questions and direction before calling contractors, designers, or the city.</p>
+      </div>
+    </div>
+    <p class="step-cta"><a class="cta-link" href="/free-adu-prep-check">Get My Free ADU Property Preview &rarr;</a></p>
   </section>
 
-  <section class="helps-with">
-    <h2>Know Your Options Before You Start</h2>
-    <p>Riverside ADU Guide helps you understand:</p>
-    <ul>
-      <li>Detached ADUs</li>
-      <li>Garage conversion ADUs</li>
-      <li>Junior ADUs / JADUs</li>
-      <li>Common ADU cost ranges</li>
-      <li>Permit and planning questions</li>
-      <li>Contractor red flags</li>
-      <li>Quote comparison basics</li>
-      <li>Questions to ask before hiring anyone</li>
-    </ul>
-    <p>The goal is simple: give homeowners more power, more clarity, and better questions before they start collecting quotes.</p>
+  <section class="showcase">
+    <p class="section-label">What you may receive</p>
+    <h2>Here&rsquo;s What a Free ADU Property Preview Can Help Clarify</h2>
+    <div class="showcase-grid">
+      <div class="preview-card">
+        <p class="preview-card-title">Typical Riverside Lot</p>
+
+        <p class="preview-card-label">Possible directions</p>
+        <ul>
+          <li>Detached backyard ADU may be worth exploring</li>
+          <li>Garage conversion may depend on structure and access</li>
+          <li>JADU may depend on interior layout and entrance</li>
+        </ul>
+
+        <p class="preview-card-label">Visible questions to verify</p>
+        <ul>
+          <li>Rear yard depth</li>
+          <li>Side access</li>
+          <li>Utility path</li>
+          <li>Garage condition</li>
+          <li>Privacy from main home and neighbors</li>
+        </ul>
+
+        <p class="preview-card-label">Suggested next step</p>
+        <p>Take photos of the backyard, side yard, garage, electrical panel, and possible entrance area before speaking with contractors.</p>
+      </div>
+
+      <div class="showcase-text">
+        <p>This is the kind of first-pass thinking most homeowners wish they had before the first contractor conversation.</p>
+        <p>Generic ADU advice can explain the rules. A property preview helps you understand which questions matter for your actual lot.</p>
+        <a class="cta-link" href="/free-adu-prep-check">Get Mine for My Property &rarr;</a>
+      </div>
+    </div>
   </section>
 
-  <section class="prep-check">
-    <h2>Want a First Look at Your Property Before Calling Contractors?</h2>
-    <p>Start with a free ADU Property Preview.</p>
-    <p>Enter your property address, project goal, timeline, and biggest question. We will review the basic information and help you understand which ADU path may be worth exploring next.</p>
-    <p>This may include:</p>
-    <ul>
-      <li>Detached ADU</li>
-      <li>Garage conversion</li>
-      <li>Junior ADU</li>
-      <li>Addition or conversion</li>
-      <li>&ldquo;Not sure yet&rdquo; planning direction</li>
-    </ul>
-    <p>This is not an official permit approval, legal opinion, architectural plan, or engineering review. It is a preliminary homeowner planning review based on available information and common ADU planning factors.</p>
-    <a class="cta-link" href="/free-adu-prep-check">Start My Free ADU Property Preview</a>
-  </section>
-
-  <section class="why-guide">
-    <h2>Built for Riverside Homeowners Who Want to Avoid Rushed Decisions</h2>
-    <p>After years around remodeling projects, estimates, crews, and homeowner appointments, one thing becomes clear: the first meeting is easier when the homeowner is prepared.</p>
-    <p>Many people start calling contractors because they are excited, overwhelmed, or worried they are already behind. But the fastest available person is not always the right person. A low price is not always a good deal. A confident salesman is not always the safest choice.</p>
-    <p>Riverside ADU Guide was created to help homeowners understand the process before they are pressured into decisions.</p>
-    <p>We are building a local resource for homeowners who want to ask smarter questions, avoid obvious red flags, and move forward with more confidence.</p>
-  </section>
-
-  <section class="guide-links">
-    <h2>Start With These Riverside ADU Guides</h2>
-    <ul>
-      <li><a href="/adu-cost-guide">ADU Cost Guide for Riverside Homeowners</a></li>
-      <li><a href="/garage-conversion">Garage Conversion ADU Guide</a></li>
-      <li><a href="/junior-adu-guide">Junior ADU / JADU Guide</a></li>
-      <li><a href="/permits-guide">Riverside ADU Permits Guide</a></li>
-      <li><a href="/contractor-red-flags">ADU Contractor Red Flags</a></li>
-    </ul>
-    <p>Each guide is written to be simple, practical, and homeowner-friendly.</p>
+  <section class="receive">
+    <h2>What Your Preview May Include</h2>
+    <div class="receive-grid">
+      <div class="receive-item">ADU, garage conversion, or JADU direction</div>
+      <div class="receive-item">Visible lot and access questions</div>
+      <div class="receive-item">Basic setback and placement considerations</div>
+      <div class="receive-item">Garage or interior layout questions</div>
+      <div class="receive-item">Red flags to verify before hiring anyone</div>
+      <div class="receive-item">Photos that would help next</div>
+      <div class="receive-item">Questions to ask contractors, designers, or the city</div>
+    </div>
   </section>
 
   <section class="local-trust">
-    <h2>Local, Practical, and Homeowner-First</h2>
-    <p>Riverside ADU Guide is not a generic national lead site pretending to know your city.</p>
-    <p>This project is being built from Riverside, with real remodeling and project-management experience behind it. The goal is to help local homeowners understand their options before they call contractors, compare quotes, or start planning an ADU.</p>
-    <p>Over time, this site will grow into a stronger local resource with checklists, case studies, contractor questions, homeowner stories, and trusted professional connections.</p>
+    <h2>Built for Riverside Homeowners, Not National Lead Buyers</h2>
+    <p>Riverside ADU Guide is being built as a practical local resource for homeowners who want clarity before inviting contractors into their home. The goal is simple: help you understand your options, ask better questions, and avoid rushed decisions.</p>
+    <p>Riverside properties can vary widely — older homes, detached garages, side-yard access, larger backyard lots, hillside areas, Wood Streets, Orangecrest, Canyon Crest, La Sierra, Woodcrest, and nearby Inland Empire neighborhoods all bring different questions. Generic ADU advice is not enough when the real question is what may work on your specific property.</p>
+    <p class="disclaimer-note">The Free ADU Property Preview is preliminary information only. It is not city approval, architecture, engineering, legal advice, a permit guarantee, or a contractor estimate.</p>
   </section>
 
-  <section class="cta">
-    <h2>Before You Call Contractors, Get Prepared</h2>
-    <p>If you are thinking about an ADU, garage conversion, or junior ADU in Riverside or the Inland Empire, start with the basics.</p>
-    <p>Get clear on your options, your questions, and the red flags to watch for.</p>
-    <a class="cta-link" href="/free-adu-prep-check">Get My Free ADU Property Preview</a>
+  <section class="guides">
+    <p class="section-label">Prefer to research first?</p>
+    <h2>Read the Riverside ADU Guides</h2>
+    <p>The guides are here if you want to understand costs, garage conversions, JADUs, permits, and contractor red flags before requesting a preview.</p>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <h3><a href="/adu-cost-guide">ADU Cost Guide</a></h3>
+        <p>Understand cost factors, hidden costs, and why ADU quotes vary.</p>
+      </div>
+      <div class="guide-card">
+        <h3><a href="/garage-conversion">Garage Conversion Guide</a></h3>
+        <p>Learn what to check before turning a garage into living space.</p>
+      </div>
+      <div class="guide-card">
+        <h3><a href="/junior-adu-guide">Junior ADU / JADU Guide</a></h3>
+        <p>Review privacy, entrance, kitchenette, and layout questions.</p>
+      </div>
+      <div class="guide-card">
+        <h3><a href="/permits-guide">Riverside ADU Permits Guide</a></h3>
+        <p>Understand plans, permits, corrections, and city review basics.</p>
+      </div>
+      <div class="guide-card">
+        <h3><a href="/contractor-red-flags">Contractor Red Flags</a></h3>
+        <p>Know the warning signs before hiring anyone.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Ready to See What May Work on Your Property?</h2>
+    <p>Start with your address and project idea. We&rsquo;ll help you organize the first questions before you call contractors.</p>
+    <a class="cta-link" href="/free-adu-prep-check">Start My Free ADU Property Preview &rarr;</a>
+    <p class="small-note">No cost. No obligation. No contractor sales pitch.</p>
   </section>
   </div>
 </BaseLayout>
