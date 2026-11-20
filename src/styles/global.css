@@ -731,3 +731,28 @@ button[type="submit"]:hover {
     box-sizing: border-box;
   }
 }
+
+
+/* Free ADU Budget Planner cross-site invitation */
+.budget-home-feature{background:#17324d;color:#fff;padding:31px 25px}
+.budget-feature-inner{max-width:1120px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.budget-feature-inner>div{max-width:720px}
+.budget-feature-inner h2{color:#fff;font-size:clamp(1.4rem,3vw,2rem);margin:6px 0}
+.budget-feature-inner p{color:#e0eaf2;margin:5px 0}
+.budget-feature-inner .budget-feature-label{color:#ffc883;font-weight:800;font-size:.75rem;letter-spacing:.13em}
+.budget-feature-link{background:#d76531;color:#fff;text-decoration:none;padding:13px 17px;border-radius:6px;font-weight:800;display:inline-block}
+.budget-feature-link:hover{background:#b74c23;color:#fff}
+
+
+/* Accessible compact navigation on small screens */
+.nav-top{display:contents}
+.site-nav-toggle{display:none}
+@media(max-width:640px){
+  .site-nav{padding:13px 17px;gap:0}
+  .site-nav .nav-top{display:flex;width:100%;align-items:center;justify-content:space-between;gap:14px}
+  .site-nav-toggle{display:inline-flex;align-items:center;gap:9px;background:#284762;color:#fff;border:1px solid #7390a4;border-radius:6px;padding:10px 12px;font:inherit;font-weight:700;cursor:pointer}
+  .site-nav-toggle:focus-visible{outline:3px solid #ffbe79;outline-offset:2px}
+  .site-nav .nav-links{display:none;width:100%;padding:18px 0 4px;flex-direction:column;gap:12px}
+  .site-nav.is-open .nav-links{display:flex}
+  .site-nav.is-open .site-nav-toggle{background:#3b6887}
+}
