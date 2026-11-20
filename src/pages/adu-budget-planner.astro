@@ -1,0 +1,229 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Free ADU Budget Planner | Riverside ADU Guide"
+  description="Build a transparent, editable preliminary ADU budget for a Riverside or Inland Empire property. Explore construction, site work, utility, permitting, and contingency assumptions."
+>
+  <div class="budget-page">
+    <section class="budget-hero">
+      <div class="budget-shell">
+        <p class="budget-eyebrow">FREE HOMEOWNER TOOL / INLAND EMPIRE</p>
+        <h1>Know the questions <em>before</em> you know the price.</h1>
+        <p class="budget-lead">Try different ADU budget scenarios with your own construction assumptions. See the pieces that can change the total, then take a clearer plan into a conversation with a contractor or designer.</p>
+        <div class="budget-tags"><span>No account</span><span>No personal data requested</span><span>Editable assumptions</span></div>
+      </div>
+    </section>
+
+    <div class="budget-shell planner-layout">
+      <section class="planner-form-card" aria-labelledby="budget-inputs-title">
+        <div class="planner-card-head">
+          <p class="budget-eyebrow">01 / BUILD YOUR SCENARIO</p>
+          <h2 id="budget-inputs-title">The inputs</h2>
+          <p>We've filled in a <strong>fictional example</strong> so you can try the tool. Every figure is adjustable; these values are <strong>not</strong> a price quote, construction bid, or current Riverside market benchmark.</p>
+        </div>
+        <form id="adu-budget-form" autocomplete="off">
+          <div class="planner-fields">
+            <label class="planner-field">Project concept
+              <select id="project-type" name="project-type">
+                <option value="Detached backyard ADU">Detached backyard ADU</option>
+                <option value="Garage conversion">Garage conversion</option>
+                <option value="Junior ADU / interior conversion">Junior ADU / interior conversion</option>
+              </select>
+            </label>
+            <label class="planner-field">Proposed living area (sq ft)
+              <input id="area" name="area" type="number" min="100" max="5000" step="25" value="650" required inputmode="numeric" />
+            </label>
+            <label class="planner-field">Construction allowance ($ / sq ft)
+              <input id="unit-cost" name="unit-cost" type="number" min="1" max="2500" step="1" value="300" required inputmode="decimal" />
+            </label>
+            <label class="planner-field">Site preparation ($)
+              <input id="site-cost" name="site-cost" type="number" min="0" max="2000000" step="500" value="12000" required inputmode="decimal" />
+            </label>
+            <label class="planner-field">Utility connections / upgrades ($)
+              <input id="utility-cost" name="utility-cost" type="number" min="0" max="2000000" step="500" value="15000" required inputmode="decimal" />
+            </label>
+            <label class="planner-field">Plans, design &amp; engineering ($)
+              <input id="design-cost" name="design-cost" type="number" min="0" max="2000000" step="500" value="15000" required inputmode="decimal" />
+            </label>
+            <label class="planner-field">Permit / review allowance ($)
+              <input id="permit-cost" name="permit-cost" type="number" min="0" max="2000000" step="500" value="7000" required inputmode="decimal" />
+            </label>
+            <label class="planner-field">Contingency (%)
+              <input id="contingency" name="contingency" type="number" min="0" max="100" step="1" value="15" required inputmode="decimal" />
+            </label>
+          </div>
+          <div class="planner-actions">
+            <button type="button" class="planner-secondary" id="reset-example">Restore fictional example</button>
+          </div>
+        </form>
+        <p class="planner-input-note">Different sites, jurisdictions, utilities, designs, existing structures, financing and contractor bids can change costs dramatically. Nothing here determines ADU feasibility or permit approval.</p>
+      </section>
+
+      <section class="planner-result-card" aria-labelledby="budget-results-title">
+        <p class="budget-eyebrow">02 / YOUR WORKSHEET</p>
+        <h2 id="budget-results-title">Planning budget</h2>
+        <p class="planner-result-kicker" id="scenario-description">Detached backyard ADU • Fictional scenario</p>
+        <p class="planner-total" id="grand-total" aria-live="polite">$280,600</p>
+        <p class="planner-total-caption">Estimated worksheet total, <strong>not a quote</strong></p>
+        <div class="planner-segments" id="budget-chart" role="img" aria-label="Budget composition chart"></div>
+        <dl class="planner-results">
+          <div><dt>Area × construction allowance</dt><dd id="construction-total">—</dd></div>
+          <div><dt>Site preparation</dt><dd id="site-total">—</dd></div>
+          <div><dt>Utility connections</dt><dd id="utility-total">—</dd></div>
+          <div><dt>Design &amp; engineering</dt><dd id="design-total">—</dd></div>
+          <div><dt>Permits &amp; review</dt><dd id="permit-total">—</dd></div>
+          <div class="planner-subtotal"><dt>Subtotal before contingency</dt><dd id="subtotal">—</dd></div>
+          <div><dt>Contingency allowance</dt><dd id="contingency-total">—</dd></div>
+        </dl>
+        <div id="planner-feedback" role="status" aria-live="polite"></div>
+        <div class="planner-actions">
+          <button type="button" id="copy-budget" class="planner-primary">Copy my worksheet</button>
+          <button type="button" id="print-budget" class="planner-secondary">Print / Save PDF</button>
+        </div>
+        <p class="planner-private">Your inputs stay in this browser page; they are not submitted to Riverside ADU Guide.</p>
+      </section>
+    </div>
+
+    <section class="budget-bottom budget-shell">
+      <div>
+        <p class="budget-eyebrow">03 / TAKE THE NEXT STEP</p>
+        <h2>Numbers aren't the whole picture.</h2>
+        <p>Access, setbacks, utilities, an existing garage's condition, and local permitting can determine which path is worth pursuing. The worksheet helps with budgeting; our preliminary property review helps with questions.</p>
+        <a class="planner-primary budget-link" href="/free-adu-prep-check">Request a free ADU Property Preview &rarr;</a>
+      </div>
+      <aside class="budget-note">
+        <h3>Before you rely on any budget</h3>
+        <ul>
+          <li>Confirm parcel constraints and ADU type with the relevant city or county.</li>
+          <li>Ask a licensed professional to review design and site conditions.</li>
+          <li>Get itemized bids and allowances for utilities and site work.</li>
+          <li>Account for financing, schedule, and unexpected conditions separately.</li>
+        </ul>
+        <a href="/adu-cost-guide">Read the Riverside ADU Cost Guide &rarr;</a>
+      </aside>
+    </section>
+  </div>
+  <style>
+    .budget-page {background:#f4f7fa; color:#17324d; line-height:1.55}
+    .budget-shell{width:min(1140px,calc(100% - 40px));margin:0 auto}
+    .budget-hero{background:linear-gradient(135deg,#112a42,#214766);color:#fff;padding:76px 0 78px}
+    .budget-eyebrow{font-size:.77rem;font-weight:800;letter-spacing:.15em;color:#e79b45;text-transform:uppercase;margin:0 0 12px}
+    .budget-hero h1{color:#fff;font-size:clamp(2.35rem,5.2vw,4.7rem);line-height:1.11;max-width:880px;letter-spacing:-.045em;margin:0 0 20px}
+    .budget-hero h1 em{color:#ffc87a;font-style:normal}
+    .budget-lead{font-size:1.16rem;max-width:775px;color:#e0eaf2}
+    .budget-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+    .budget-tags span{border:1px solid #7191a8;padding:7px 13px;border-radius:100px;font-size:.86rem}
+    .planner-layout{display:grid;grid-template-columns:1.12fr .88fr;gap:24px;align-items:start;margin-top:-38px;position:relative}
+    .planner-form-card,.planner-result-card{background:white;border-radius:15px;box-shadow:0 15px 42px #14314914;padding:clamp(22px,3.3vw,37px)}
+    .planner-card-head h2,.planner-result-card h2,.budget-bottom h2{font-size:clamp(1.55rem,3vw,2rem);margin:0 0 10px;letter-spacing:-.025em}
+    .planner-card-head>p:last-child{color:#526578;font-size:.95rem}
+    .planner-fields{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin-top:25px}
+    .planner-field{font-size:.86rem;font-weight:700;display:flex;flex-direction:column;gap:7px}
+    .planner-field input,.planner-field select{width:100%;border:1px solid #b9c9d5;border-radius:8px;background:#fff;min-height:45px;padding:10px 12px;color:#17324d;font-size:1rem}
+    .planner-field input:focus,.planner-field select:focus{outline:3px solid #ffc88d;outline-offset:1px}
+    .planner-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .planner-primary,.planner-secondary{font:inherit;font-weight:800;border-radius:9px;padding:12px 17px;min-height:44px;cursor:pointer;display:inline-block;text-decoration:none}
+    .planner-primary{border:1px solid #ce5d2b;background:#d76531;color:#fff}
+    .planner-primary:hover{background:#ad4621;color:#fff}
+    .planner-secondary{border:1px solid #a1b4c4;background:white;color:#17324d}
+    .planner-secondary:hover{background:#eff5fa}
+    .planner-input-note,.planner-private{color:#607184;font-size:.84rem;margin-top:20px}
+    .planner-result-card{background:#17324d;color:white;position:sticky;top:20px}
+    .planner-result-card .budget-eyebrow{color:#ffc87a}
+    .planner-result-card h2{color:#fff}
+    .planner-result-kicker{font-size:.93rem;color:#d9e6ee}
+    .planner-total{font-size:clamp(2.25rem,5vw,3.5rem);line-height:1.05;font-weight:900;letter-spacing:-.055em;margin:16px 0 5px;font-variant-numeric:tabular-nums}
+    .planner-total-caption{font-size:.84rem;color:#d4e0e9;margin-bottom:17px}
+    .planner-segments{height:13px;border-radius:14px;background:#45647b;overflow:hidden;display:flex;margin-bottom:22px}
+    .planner-segments span{height:100%}
+    .planner-results{margin:0}
+    .planner-results>div{display:flex;gap:15px;align-items:baseline;justify-content:space-between;padding:10px 0;border-bottom:1px solid #3a5268}
+    .planner-results dt{font-size:.83rem;color:#dbe4ed}
+    .planner-results dd{font-weight:750;margin:0;white-space:nowrap;font-variant-numeric:tabular-nums}
+    .planner-results .planner-subtotal{border-top:2px solid #90a8bb;margin-top:8px}
+    #planner-feedback{font-size:.85rem;color:#ffdaaf;margin-top:12px;min-height:1.2em}
+    .planner-result-card .planner-secondary{background:transparent;color:white;border-color:#8199ab}
+    .planner-result-card .planner-secondary:hover{background:#2c4862}
+    .planner-private{color:#d4e0e9}
+    .budget-bottom{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,5vw,80px);padding:72px 0 100px}
+    .budget-bottom p{max-width:680px;color:#526578}
+    .budget-link{margin-top:16px}
+    .budget-note{padding:25px;background:white;border-left:4px solid #d76531;border-radius:10px}
+    .budget-note h3{margin-top:0}
+    .budget-note li{margin-bottom:8px}
+    .budget-note a{color:#0b4f82;font-weight:750}
+    @media(max-width:830px){.planner-layout,.budget-bottom{grid-template-columns:1fr}.planner-result-card{position:static}}
+    @media(max-width:520px){.budget-shell{width:calc(100% - 24px)}.budget-hero{padding:44px 0 60px}.planner-fields{grid-template-columns:1fr}.planner-form-card,.planner-result-card{padding:20px}.planner-total{font-size:2.5rem}}
+    @media print{.site-header,.site-footer,.budget-hero,.planner-actions,.budget-bottom{display:none!important}.planner-layout{display:block;margin:0}.planner-form-card{display:none}.planner-result-card{box-shadow:none;color:#17324d;background:white;position:static}.planner-results dt,.planner-result-card p{color:#17324d}.planner-results>div{border-bottom:1px solid #bbb}.planner-segments{display:none}}
+  </style>
+  <script is:inline>
+    (function () {
+      'use strict';
+      var form = document.getElementById('adu-budget-form');
+      if (!form) return;
+      var ids = ['area','unit-cost','site-cost','utility-cost','design-cost','permit-cost','contingency'];
+      var money = new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
+      var palette = ['#f2a159','#77b6d8','#69c2a2','#be99dc','#f7d07c','#e56d66'];
+      var defaults = {area:650,'unit-cost':300,'site-cost':12000,'utility-cost':15000,'design-cost':15000,'permit-cost':7000,contingency:15};
+      var model = null;
+      function setText(id,text){document.getElementById(id).textContent=text;}
+      function getValue(id){var n=Number(document.getElementById(id).value);return Number.isFinite(n)?n:NaN;}
+      function render() {
+        var vals={};
+        var valid=true;
+        ids.forEach(function(id){var el=document.getElementById(id);vals[id]=getValue(id);if(!Number.isFinite(vals[id])||!el.checkValidity())valid=false;});
+        if (!valid) {
+          setText('grand-total','—');
+          setText('planner-feedback','Please enter valid non-negative amounts within the field limits.');
+          model=null; return;
+        }
+        var construction=vals.area*vals['unit-cost'];
+        var subtotal=construction+vals['site-cost']+vals['utility-cost']+vals['design-cost']+vals['permit-cost'];
+        var contingency=subtotal*vals.contingency/100;
+        var total=subtotal+contingency;
+        var segments=[construction,vals['site-cost'],vals['utility-cost'],vals['design-cost'],vals['permit-cost'],contingency];
+        model={project:document.getElementById('project-type').value,area:vals.area,costPerFoot:vals['unit-cost'],construction:construction,site:vals['site-cost'],utilities:vals['utility-cost'],design:vals['design-cost'],permits:vals['permit-cost'],contingencyRate:vals.contingency,contingency:contingency,subtotal:subtotal,total:total};
+        setText('scenario-description',model.project+' • Editable fictional example');
+        setText('grand-total',money.format(total));
+        setText('construction-total',money.format(construction));
+        setText('site-total',money.format(model.site));
+        setText('utility-total',money.format(model.utilities));
+        setText('design-total',money.format(model.design));
+        setText('permit-total',money.format(model.permits));
+        setText('subtotal',money.format(subtotal));
+        setText('contingency-total',money.format(contingency));
+        setText('planner-feedback','');
+        var chart=document.getElementById('budget-chart');
+        chart.textContent='';
+        segments.forEach(function(amount,i){if(total<=0)return;var slice=document.createElement('span');slice.style.width=(amount/total*100)+'%';slice.style.background=palette[i];chart.appendChild(slice);});
+        chart.setAttribute('aria-label','Construction '+Math.round(construction/total*100)+' percent of the fictional budget. All numbers editable.');
+      }
+      form.addEventListener('input',render);
+      form.addEventListener('change',render);
+      form.addEventListener('submit',function(e){e.preventDefault();render();});
+      document.getElementById('reset-example').addEventListener('click',function(){
+        Object.keys(defaults).forEach(function(k){document.getElementById(k).value=defaults[k];});
+        document.getElementById('project-type').value='Detached backyard ADU';
+        render();
+      });
+      function summary(){
+        return ['Riverside ADU Guide — Editable Budget Worksheet','Concept: '+model.project,'Area: '+model.area+' sq ft','Construction allowance: '+money.format(model.costPerFoot)+' / sq ft','Construction: '+money.format(model.construction),'Site preparation: '+money.format(model.site),'Utilities: '+money.format(model.utilities),'Design & engineering: '+money.format(model.design),'Permits: '+money.format(model.permits),'Subtotal: '+money.format(model.subtotal),'Contingency ('+model.contingencyRate+'%): '+money.format(model.contingency),'TOTAL: '+money.format(model.total),'','Sample assumptions only — not a bid, appraisal, permit approval or current market price. Verify with licensed professionals and local agencies.'].join('\n');
+      }
+      document.getElementById('copy-budget').addEventListener('click',async function(){
+        if(!model){setText('planner-feedback','Correct the inputs before copying.');return;}
+        try{
+          if(!navigator.clipboard || !window.isSecureContext)throw new Error('Clipboard unavailable');
+          await navigator.clipboard.writeText(summary());
+          setText('planner-feedback','Worksheet copied. No data was sent to us.');
+        }catch(e){
+          var blob=new Blob([summary()],{type:'text/plain'});
+          var u=URL.createObjectURL(blob);var a=document.createElement('a');a.href=u;a.download='riverside-adu-budget-worksheet.txt';a.click();setTimeout(function(){URL.revokeObjectURL(u);},1000);
+          setText('planner-feedback','Worksheet saved as a text file.');
+        }
+      });
+      document.getElementById('print-budget').addEventListener('click',function(){if(model)window.print();});
+      render();
+    })();
+  </script>
+</BaseLayout>

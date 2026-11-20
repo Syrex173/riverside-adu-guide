@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 const { title, description } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, 'https://www.riversideaduguide.com').toString();
 ---
 <!doctype html>
 <html lang="en">
@@ -9,14 +10,27 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="icon" href="/favicon.ico" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Riverside ADU Guide" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#17324d" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
     <header class="site-header">
       <nav class="site-nav">
-        <a href="/" class="site-logo">Riverside ADU Guide</a>
-        <div class="nav-links">
+        <div class="nav-top">
+          <a href="/" class="site-logo">Riverside ADU Guide</a>
+          <button type="button" class="site-nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation menu">Menu <span aria-hidden="true">&#9776;</span></button>
+        </div>
+        <div class="nav-links" id="primary-nav">
           <a href="/adu-cost-guide">ADU Cost Guide</a>
+          <a href="/adu-budget-planner">Budget Planner</a>
           <a href="/garage-conversion">Garage Conversion</a>
           <a href="/junior-adu-guide">Junior ADU</a>
           <a href="/permits-guide">Permits Guide</a>
@@ -30,8 +44,27 @@ const { title, description } = Astro.props;
     </main>
     <footer class="site-footer">
       <div class="site-wrapper">
-        <p>&copy; 2026 Riverside ADU Guide. Serving Inland Empire homeowners.</p>
+        <p>&copy; 2026 Riverside ADU Guide. Serving Inland Empire homeowners. <a href="/adu-budget-planner">Free Budget Planner</a></p>
       </div>
     </footer>
+    <script is:inline>
+      (function () {
+        var button = document.querySelector('.site-nav-toggle');
+        var nav = document.querySelector('.site-nav');
+        if (!button || !nav) return;
+        button.addEventListener('click', function () {
+          var open = button.getAttribute('aria-expanded') !== 'true';
+          button.setAttribute('aria-expanded', String(open));
+          nav.classList.toggle('is-open', open);
+        });
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+            button.setAttribute('aria-expanded', 'false');
+            nav.classList.remove('is-open');
+            button.focus();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
